@@ -1,9 +1,18 @@
 let questions = window.arraysModule.getQuestions();
 let option = window.arraysModule.getOptions();
 let answers = window.arraysModule.getAnswers();
+let question_num = [];
+console.log(questions);
+console.log(option);
+console.log(answers);
 
-let question_num = [1, 2, 3, 4, 5, 6, 7];
+for (let i = 0; i < questions.length; i++) {
+  question_num[i] = i + 1;
+}
 
+console.log(question_num);
+
+let zero = document.getElementsByClassName("zero")[0];
 let main_btn = document.getElementsByClassName("start")[0];
 let info = document.getElementsByClassName("info")[0];
 let exit = document.getElementsByClassName("info-exit")[0];
@@ -22,7 +31,7 @@ let obtained = document.getElementById("obtained");
 let total_ques = document.getElementsByClassName("total-ques");
 let tries = document.getElementsByClassName("tries")[0];
 let logout_btn = document.getElementById("logout-btn");
-console.log("logout button is:", logout_btn);
+let crowm = document.getElementsByClassName("crowm")[0];
 total_ques[0].innerHTML = questions.length;
 total_ques[1].innerHTML = questions.length;
 total_ques[2].innerHTML = questions.length;
@@ -30,6 +39,12 @@ let i = 0;
 let stop_time = 0;
 let score = 0;
 let chk_next = false;
+
+if (questions.length == 0) {
+  zero.style.display = "block";
+  info.style.display = "none";
+  tries.style.display = "none";
+}
 
 logout_btn.addEventListener("click", () => {
   console.log("logout button clicked");
@@ -59,6 +74,8 @@ next_btn.addEventListener("click", () => {
     optionEnabler();
     i++;
     if (i == questions.length) {
+      if (score == questions.length / 2) {
+      }
       info.style.display = "none";
       question.style.display = "none";
       end.style.display = "block";

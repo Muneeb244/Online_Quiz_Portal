@@ -7,9 +7,9 @@ if (isset($_COOKIE['logout'])) {
     header("Location: ../userLogout.php");
 }
 
-if (!isset($_SESSION['email'])) {
-    header("Location: ../SignIn.php");
-}
+// if (!isset($_SESSION['email'])) {
+//     header("Location: ../SignIn.php");
+// }
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +59,13 @@ if (!isset($_SESSION['email'])) {
             <div class="text-center" style='font-size:100px;'>&#128512;</div>
         </div>
 
+
+        <div class="zero">
+            <div class="title text-center">
+                No questions available to show!
+            </div>
+            <div class="text-center" style='font-size:100px;'>&#128577;</div>
+        </div>
 
 
         <div class="info">

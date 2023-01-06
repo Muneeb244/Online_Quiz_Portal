@@ -28,7 +28,8 @@ body{
 .info,
 .question,
 .end,
-.tries{
+.tries,
+.zero{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -46,7 +47,7 @@ body{
     cursor: pointer;
 }
 
-.tries{
+.tries, .zero{
     background-color: #fff;
     width: 40%;
     height: inherit;
@@ -302,7 +303,7 @@ body{
 }
 
 @media screen and (max-width: 1100px){
-    .info, .question, .remaining, .tries, .end{
+    .info, .question, .remaining, .tries, .end, .zero{
         width: 90%;
     }
     .info .rules {

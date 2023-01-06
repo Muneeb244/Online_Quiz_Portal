@@ -15,24 +15,25 @@ function quesNum($con)
     $result =  $ques_num->fetch_assoc();
     if (isset($result['sno'])) {
         $result = ++$result['sno'];
+        // echo "in quesNum <br>";
     } else {
         $result = 1;
     }
     return $result;
 }
 
-function optNum($con)
-{
-    $ques_num = ("SELECT * FROM questions ORDER BY sno DESC LIMIT 1");
-    $ques_num = $con->query($ques_num);
-    $result =  $ques_num->fetch_assoc();
-    if (isset($result['opt_id'])) {
-        $result = ++$result['opt_id'];
-    } else {
-        $result = 1;
-    }
-    return $result;
-}
+// function optNum($con)
+// {
+//     $ques_num = ("SELECT * FROM questions ORDER BY sno DESC LIMIT 1");
+//     $ques_num = $con->query($ques_num);
+//     $result =  $ques_num->fetch_assoc();
+//     if (isset($result['opt_id'])) {
+//         $result = ++$result['opt_id'];
+//     } else {
+//         $result = 1;
+//     }
+//     return $result;
+// }
 
 function AddQuestion($con, $question)
 {
@@ -98,7 +99,7 @@ if (isset($_POST['submit'])  && !empty($_POST['question']) && !empty($_POST['opt
     // echo ($option3);
     // echo ($option4);
 
-    $result = optNum($con);
+    $result = quesNum($con);
     $answer = 0;
 
     if (isset($_COOKIE['myCookie'])) {
@@ -117,6 +118,7 @@ if (isset($_POST['submit'])  && !empty($_POST['question']) && !empty($_POST['opt
         }
     }
 
+    var_dump($result);
     // echo "$answer";
 
 

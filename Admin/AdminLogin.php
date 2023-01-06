@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (isset($_SESSION['name'])) {
+    unset($_SESSION['name']);
+}
 $success = false;
 $temp = false;
 if (isset($_POST['submit']) && !empty($_POST['name']) && !empty($_POST['password'])) {
@@ -87,10 +90,7 @@ if (isset($_POST['submit']) && !empty($_POST['name']) && !empty($_POST['password
                         <a class="nav-link text-light" aria-current="page" href="../index.php">Home</a>
                     </li>
                     <li class="nav-item m-1">
-                        <a class="nav-link text-light" href="#">About</a>
-                    </li>
-                    <li class="nav-item m-1">
-                        <a class="nav-link text-light" href="#">Contact Us</a>
+                        <a class="nav-link text-light" href="../contactUs.php">Contact Us</a>
                     </li>
                 </ul>
                 <span class="navbar-text">

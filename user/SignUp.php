@@ -35,7 +35,7 @@ if (isset($_POST['submit']) && !empty($_POST['name']) && !empty($_POST['email'])
     //   }
     // }
 
-    $sql = "INSERT INTO `users` (`name`, `email`, `password`) VALUES ('$name', '$email', '$password')";
+    $sql = "INSERT INTO `users` (`name`, `email`, `password`, `marks`) VALUES ('$name', '$email', '$password', '-1')";
 
     if ($con->query($sql) == true) {
       // echo "Successfully inserted";
@@ -85,10 +85,7 @@ if (isset($_POST['submit']) && !empty($_POST['name']) && !empty($_POST['email'])
             <a class="nav-link text-light" aria-current="page" href="../index.php">Home</a>
           </li>
           <li class="nav-item m-1">
-            <a class="nav-link text-light" href="#">About</a>
-          </li>
-          <li class="nav-item m-1">
-            <a class="nav-link text-light" href="#">Contact Us</a>
+            <a class="nav-link text-light" href="../contactUs.php">Contact Us</a>
           </li>
         </ul>
         <span class="navbar-text">
