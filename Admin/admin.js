@@ -129,7 +129,6 @@ btn5.addEventListener("click", function () {
 
 let selected = 0;
 var radio_btns = document.getElementsByName("optradio");
-// console.log(radio_btns);
 for (var i = 0; i < radio_btns.length; i++) {
   radio_btns[i].addEventListener("click", function (e) {
     let selected = e.target.value;
@@ -145,26 +144,7 @@ function setCookie(cname, cvalue, exMinutes) {
   d.setTime(d.getTime() + exMinutes * 60 * 1000);
   var expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  // getCookies();
 }
-
-// setCookie("myCookie", selected, 1);
-
-// function updateCookie(name, value) {
-//   document.cookie = name + "=" + value;
-//   console.log("cookie updated");
-// }
-
-// function getCookies() {
-//   var cookies = document.cookie.split(";");
-//   var ret = "";
-//   for (var i = 1; i <= cookies.length; i++) {
-//     ret += i + " - " + cookies[i - 1] + "<br>";
-//     console.log(ret);
-//   }
-// }
-
-// getCookies();
 
 const listItems = document.querySelectorAll("li");
 listItems.innerHTML = "";
@@ -174,7 +154,6 @@ listItems.forEach(function (item) {
   }
 });
 
-// Removing selected questions from phpmyadmin **********************************************
 
 let remove = 0;
 var remove_btns = document.getElementsByName("remove");
@@ -185,22 +164,8 @@ for (var i = 0; i < remove_btns.length; i++) {
   });
 }
 
-// var btn = document.getElementsByClassName("disable")[0];
-// btn.disabled = true;
-// btn.addEventListener("click", function (e) {
-//   btn.disabled = false;
-// });
-
-// Filters on records **************************************
-
 var value = "all";
 var select = document.getElementById("filter");
 select.addEventListener("change", function (e) {
   setCookie("selected", e.target.value, 1);
 });
-// value = e.value;
-// var text = e.options[e.selectedIndex].text;
-// console.log("value", value)
-// console.log(text)
-
-// Updating only section-3

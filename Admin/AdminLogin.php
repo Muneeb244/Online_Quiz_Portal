@@ -17,22 +17,6 @@ if (isset($_POST['submit']) && !empty($_POST['name']) && !empty($_POST['password
     }
 
 
-
-    // $sql = "SELECT * FROM `admin`";
-    // $result = $con->query($sql);
-
-    // if ($result->num_rows > 0) {
-    //     // output data of each row
-    //     while ($row = $result->fetch_assoc()) {
-    //         if ($row["name"] == $_POST["name"] && $row["password"] == $_POST["password"]) {
-    //             $success = true;
-    //             echo "success";
-    //             exit();
-    //         }
-    //         // else echo "<br> id: " . $row["sno"] . " - Name: " . $row["name"] . " " . $row["email"] . "<br>";
-    //     }
-    // }
-
     $name = $_POST['name'];
     $_SESSION['name'] = $name;
 

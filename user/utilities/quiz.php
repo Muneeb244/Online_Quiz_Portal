@@ -7,9 +7,6 @@ if (isset($_COOKIE['logout'])) {
     header("Location: ../userLogout.php");
 }
 
-// if (!isset($_SESSION['email'])) {
-//     header("Location: ../SignIn.php");
-// }
 ?>
 
 <!DOCTYPE html>
@@ -28,16 +25,10 @@ if (isset($_COOKIE['logout'])) {
 </head>
 
 <body>
-    <!-- <div class="frontier">
-    
-    </div> -->
 
     <nav>
         <div class="logo d-flex justify-content-between p-9 temp">
             <img src="../../Assets/logo-white.png" alt="logo" width="110" height="30">
-            <!-- <button type="button" class="btn btn-outline-light">
-                <a href="http://" class="text-light" style="text-decoration: none;">Logout</a>
-            </button> -->
             <a href="./quiz.php">
                 <button type="button" class="btn btn-outline-light" id="logout-btn">
                     Logout
@@ -103,18 +94,12 @@ if (isset($_COOKIE['logout'])) {
                 <h2 class="ques">What is html?</h2>
                 <ul>
                     <li class="options">
-                        <!-- web -->
-                        <!-- <i class="fa fa-check-circle" style="color:green"></i> -->
                     </li>
                     <li class="options">
-                        <!-- mobile -->
-                        <!-- <i class="fa fa-times-circle" style="color:red"></i> -->
                     </li>
                     <li class="options">
-                        <!-- Embedded -->
                     </li>
                     <li class="options">
-                        <!-- hacking -->
                     </li>
                 </ul>
             </div>
@@ -141,7 +126,6 @@ if (isset($_COOKIE['logout'])) {
                 <form action="./quiz.php" method="post">
                     <button class="info-btn info-exit exit-quiz">Exit</button>
                 </form>
-                <!-- <button class="next-btn res">Done</button> -->
             </div>
         </div>
 

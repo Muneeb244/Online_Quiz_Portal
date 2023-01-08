@@ -2,9 +2,6 @@ let questions = window.arraysModule.getQuestions();
 let option = window.arraysModule.getOptions();
 let answers = window.arraysModule.getAnswers();
 let question_num = [];
-console.log(questions);
-console.log(option);
-console.log(answers);
 
 for (let i = 0; i < questions.length; i++) {
   question_num[i] = i + 1;
@@ -31,7 +28,8 @@ let obtained = document.getElementById("obtained");
 let total_ques = document.getElementsByClassName("total-ques");
 let tries = document.getElementsByClassName("tries")[0];
 let logout_btn = document.getElementById("logout-btn");
-let crowm = document.getElementsByClassName("crowm")[0];
+let crown = document.querySelector(".crown h2");
+console.log(crown);
 total_ques[0].innerHTML = questions.length;
 total_ques[1].innerHTML = questions.length;
 total_ques[2].innerHTML = questions.length;
@@ -74,7 +72,8 @@ next_btn.addEventListener("click", () => {
     optionEnabler();
     i++;
     if (i == questions.length) {
-      if (score == questions.length / 2) {
+      if (score <= questions.length / 2) {
+        crown.innerText = "Better luck next time!!!";
       }
       info.style.display = "none";
       question.style.display = "none";
@@ -124,18 +123,15 @@ for (let j = 0; j < options.length; j++) {
       options[
         j
       ].innerHTML += `<i class="fa fa-check-circle" style="color:green"></i>`;
-      // options[j].classList.add('correct');
       options[j].style.backgroundColor = `rgba(0, 128, 0, 0.217)`;
       score++;
     } else {
       options[
         j
       ].innerHTML += `<i class="fa fa-times-circle" style="color:red"></i>`;
-      // options[j].classList.add('wrong');
       options[j].style.backgroundColor = `rgba(255, 0, 0, 0.215)`;
       let index = option[i].indexOf(answers[i]);
       console.log("value of index is:", index);
-      //   let index = answers[i]
       options[
         index
       ].innerHTML += `<i class="fa fa-check-circle" style="color:green"></i>`;

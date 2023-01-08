@@ -9,10 +9,6 @@ if (!isset($_SESSION['name'])) {
     header("Location: AdminLogin.php");
 }
 
-// if (isset($_COOKIE['myCookie'])) {
-//     $cookieValue = $_COOKIE['myCookie'];
-//     echo $cookieValue;
-// }
 
 ?>
 

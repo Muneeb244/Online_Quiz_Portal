@@ -1,5 +1,4 @@
 <?php
-// session_start();
 
 $_SESSION['admin_duplicate'] = false;
 $admin_add = false;

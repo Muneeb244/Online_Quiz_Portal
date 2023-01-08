@@ -21,24 +21,9 @@ if (isset($_POST['submit']) && !empty($_POST['name']) && !empty($_POST['email'])
     $duplicate = true;
   } else {
 
-    // $sql = "SELECT * FROM `users`";
-    // $result = $con->query($sql);
-    // echo $result->num_rows;
-
-    // if ($result->num_rows > 0) {
-    //   // output data of each row
-    //   while ($row = $result->fetch_assoc()) {
-    //     if ($row["email"] == $email && $row["password"] == $password) {
-    //       $exist = true;
-    //     }
-    //     // else echo "<br> id: " . $row["sno"] . " - Name: " . $row["name"] . " " . $row["email"] . "<br>";
-    //   }
-    // }
-
     $sql = "INSERT INTO `users` (`name`, `email`, `password`, `marks`) VALUES ('$name', '$email', '$password', '-1')";
 
     if ($con->query($sql) == true) {
-      // echo "Successfully inserted";
 
       // Flag for successful insertion
       $insert = true;
@@ -136,9 +121,6 @@ if (isset($_POST['submit']) && !empty($_POST['name']) && !empty($_POST['email'])
             </div>
             <div class="text-center text-lg-start mt-4 pt-2">
               <input type="submit" class="btn btn-primary btn-lg" value="Sign Up" name="submit" />
-              <!-- <button type="button" class="" style="padding-left: 2.5rem; padding-right: 2.5rem">
-                Sign Up
-              </button> -->
               <p class="small fw-bold mt-2 pt-1 mb-0">
                 Already have an account?
                 <a href="./SignIn.php" class="link-danger">Sign In</a>

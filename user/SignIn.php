@@ -28,7 +28,6 @@ if (isset($_POST['submit']) && !empty($_POST['email']) && !empty($_POST['passwor
       } else {
         $match = false;
       }
-      // else echo "<br> id: " . $row["sno"] . " - Name: " . $row["name"] . " " . $row["email"] . "<br>";
     }
   }
 

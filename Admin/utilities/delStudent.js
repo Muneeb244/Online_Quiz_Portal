@@ -12,5 +12,4 @@ function setCookie(cname, cvalue, exMinutes) {
   d.setTime(d.getTime() + exMinutes * 60 * 1000);
   var expires = "expires=" + d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  // getCookies();
 }
