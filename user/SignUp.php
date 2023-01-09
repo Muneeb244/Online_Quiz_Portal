@@ -117,7 +117,21 @@ if (isset($_POST['submit']) && !empty($_POST['name']) && !empty($_POST['email'])
 
             <!-- Password input -->
             <div class="form-outline mb-3">
-              <input type="password" id="form3Example4" class="form-control form-control-lg pass1" placeholder="Enter password" name="password" />
+              <input type="password" id="form3Example4" class="form-control form-control-lg pass1" placeholder="Enter password" name="password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" />
+              <ul>
+                <li>
+                  <p class="text-muted mb-0 sub">Passwors should contain at least 8 characters</p>
+                </li>
+                <li>
+                  <p class="text-muted mb-0 sub">Passwors should contain at least 1 special character</p>
+                </li>
+                <li>
+                  <p class="text-muted mb-0 sub">Passwors should contain at least 1 digit</p>
+                </li>
+                <li>
+                  <p class="text-muted mb-0 sub">Passwors should contain at least 1 upper case character</p>
+                </li>
+              </ul>
             </div>
             <div class="text-center text-lg-start mt-4 pt-2">
               <input type="submit" class="btn btn-primary btn-lg" value="Sign Up" name="submit" />

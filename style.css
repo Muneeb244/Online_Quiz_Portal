@@ -87,6 +87,11 @@ main{
         border-bottom: 1px solid rgb(159, 153, 153);
         text-align: center;
     }
+
+    .sub{
+        font-size: 12px;
+        text-align: left;
+    }
   }
 
 
